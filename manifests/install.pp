@@ -38,7 +38,7 @@ define bundler::install(
     group       => $group,
     command     => $command,
     cwd         => $name,
-    path        => '/bin:/usr/bin:/usr/local/bin',
+    path        => '/bin:/usr/bin:/usr/local/bin:/opt/puppetlabs/puppet/bin',
     unless      => 'bundle check',
     require     => Package['bundler'],
     logoutput   => on_failure,
